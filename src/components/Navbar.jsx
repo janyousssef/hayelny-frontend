@@ -16,6 +16,7 @@ const Navbar = () => {
                     <Link to="/register" className="text-white font-semibold">Sign up</Link>
                     <Link to="/login" className="text-white font-semibold">Login</Link>
                     <Link to="/upload" className="text-[#50A9E3] bg-white rounded-full px-2 p-1">Upload</Link>
+                    <Link to="/result" className="text-[#50A9E3] bg-white rounded-full px-2 p-1">Results</Link>
                 </div>
             </div>
         </div>
