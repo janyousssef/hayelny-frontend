@@ -6,10 +6,13 @@ function App() {
 
   return (
     <>
-    <Navbar/>
       <Router>
+    <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Login />} />
+          <Route path="/upload" element={<Login />} />
         </Routes>
       </Router>
     </>
