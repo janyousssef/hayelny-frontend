@@ -7,7 +7,11 @@ const Login = () => {
         <div className="flex flex-col justify-end items-end gap-16 w-[824px]">
             <input type="email" className='text-[#50A9E3] bg-white rounded-full  p-6 text-2xl w-full ' placeholder='Email' />
             <input type="password" className='text-[#50A9E3] bg-white rounded-full  p-6 text-2xl w-full ' placeholder='password' />
+            <div className='flex self-center'>
+                <button className='px-10 py-4 bg-white rounded-full text-[#50A9E3] font-semibold text-3xl'>Login</button>
+            </div>
         </div>
+
         </div>
     </div>
   )
