@@ -18,6 +18,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/result" element={<Result />} />
+          <Route path="/result/:id" element={<Result />} />
         </Routes>
       </Router>
     </>
