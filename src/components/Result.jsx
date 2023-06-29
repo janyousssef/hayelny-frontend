@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 const Result = () => {
-  const [data , setData] = useState(null)
-  const {id} = useParams();
+  const [data, setData] = useState(null);
+  const { id } = useParams();
   useEffect(() => {
     const fetchData = async () => {
       console.log("triggered");
-      const response = await fetch(`http://localhost:8080/images/${id}/diagnosis`);
+      const response = await fetch(
+        `http://localhost:8080/images/${id}/diagnosis`
+      ).catch((err) => {
+        console.log(err);
+      });
       console.log("outside");
       const data = await response.json();
       setData(data);
     };
-    
+
     fetchData();
   }, []);
   return (
@@ -36,7 +40,10 @@ const Result = () => {
                       : "text-green-500"
                   }
                 >
-                  {data?.judgement === "POSITIVE"?"You have ":"You don't have "}{data?.disease.toLowerCase()}
+                  {data?.judgement === "POSITIVE"
+                    ? "You have "
+                    : "You don't have "}
+                  {data?.disease.toLowerCase()}
                 </span>
                 .{" "}
                 {data?.judgement === "POSITIVE"
@@ -71,6 +78,6 @@ const Result = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Result
+export default Result;
