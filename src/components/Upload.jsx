@@ -28,7 +28,9 @@ const Upload = () => {
                 "Content-Type": "multipart/form-data",
               },
             }
-            )
+            ).catch((err) => {
+                console.log(err);
+            });
             console.log("outside");
             navigate(`/result/${res?.data?.id}`)
             
