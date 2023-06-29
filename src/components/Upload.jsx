@@ -19,7 +19,6 @@ const Upload = () => {
           const formData = new FormData();
           formData.append('image', e.target.image.files[0]);
 
-          console.log("triggered");
           const res = await axios.post(
             "http://20.203.234.120:8080/images",
             formData,
@@ -31,7 +30,6 @@ const Upload = () => {
             ).catch((err) => {
                 console.log(err);
             });
-            console.log("outside");
             navigate(`/result/${res?.data?.id}`)
             
         } catch (error) {

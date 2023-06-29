@@ -6,13 +6,11 @@ const Result = () => {
   const { id } = useParams();
   useEffect(() => {
     const fetchData = async () => {
-      console.log("triggered");
       const response = await fetch(
         `http://20.203.234.120:8080/images/${id}/diagnosis`
       ).catch((err) => {
         console.log(err);
       });
-      console.log("outside");
       const data = await response.json();
       setData(data);
     };
