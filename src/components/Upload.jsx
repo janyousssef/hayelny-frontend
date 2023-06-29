@@ -21,7 +21,7 @@ const Upload = () => {
 
           console.log("triggered");
           const res = await axios.post(
-            "http://localhost:8080/images",
+            "http://127.0.0.1:8080/images",
             formData,
             {
               headers: {

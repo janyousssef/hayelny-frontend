@@ -8,7 +8,7 @@ const Result = () => {
     const fetchData = async () => {
       console.log("triggered");
       const response = await fetch(
-        `http://localhost:8080/images/${id}/diagnosis`
+        `http://127.0.0.1:8080/images/${id}/diagnosis`
       ).catch((err) => {
         console.log(err);
       });
