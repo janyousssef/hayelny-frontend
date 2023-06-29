@@ -50,23 +50,23 @@ const Result = () => {
               </p>
               <div className="flex flex-col items-start gap-4">
                 <div className="flex items-center gap-4">
-                  <p>Confidence : </p>
+                  <p>Confidence: </p>
                   <p className="text-black">{data?.confidence}</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <p>DiagnosisId : </p>
+                  <p>Diagnosis id: </p>
                   <p className="text-black">{data?.diagnosisId}</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <p>DiagnosisStatus : </p>
+                  <p>Diagnosis status: </p>
                   <p className="text-black">{data?.diagnosisStatus}</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <p>Disease : </p>
+                  <p>Disease: </p>
                   <p className="text-black">{data?.disease}</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <p>Judgement : </p>
+                  <p>Judgement: </p>
                   <p className="text-black">{data?.judgement}</p>
                 </div>
               </div>
