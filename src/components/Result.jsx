@@ -25,7 +25,7 @@ const Result = () => {
             Results
           </h2>
           <div className="flex gap-10 items-center">
-            <div className="flex flex-col justify-center items-center gap-4 w-[432px]  bg-blue-300 rounded-xl p-10">
+            <div className="flex flex-col justify-center items-center gap-4 w-[432px]  bg-blue-300 rounded-xl p-3">
               <img src={data?._links?.image?.href} alt="result image" />
             </div>
             <div className="bg-white shadow-xl rounded-2xl h-full p-20 text-blue-400 font-semibold text-2xl">
@@ -41,9 +41,9 @@ const Result = () => {
                   {data?.judgement === "POSITIVE"
                     ? "You have "
                     : "You don't have "}
-                  {data?.disease.toLowerCase()}
+                  {data?.disease.toLowerCase()+". "}
                 </span>
-                .{" "}
+                <br />
                 {data?.judgement === "POSITIVE"
                   ? "You should consult a doctor immediately."
                   : "There is no need to worry, but you should still follow up with a doctor."}
