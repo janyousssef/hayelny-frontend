@@ -21,7 +21,7 @@ const Upload = () => {
 
       
           const res = await axios.post(
-            "http://20.203.234.120:8080/images",
+            "http://localhost:8080/images",
             formData,
             {
               headers: {

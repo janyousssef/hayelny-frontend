@@ -6,7 +6,7 @@ const Result = () => {
   const {id} = useParams();
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://20.203.234.120:8080/images/${id}/diagnosis`);
+      const response = await fetch(`http://localhost:8080/images/${id}/diagnosis`);
       const data = await response.json();
       setData(data);
     };
