@@ -6,7 +6,9 @@ const Result = () => {
   const {id} = useParams();
   useEffect(() => {
     const fetchData = async () => {
+      console.log("triggered");
       const response = await fetch(`http://localhost:8080/images/${id}/diagnosis`);
+      console.log("outside");
       const data = await response.json();
       setData(data);
     };

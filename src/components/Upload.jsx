@@ -19,7 +19,7 @@ const Upload = () => {
           const formData = new FormData();
           formData.append('image', e.target.image.files[0]);
 
-      
+          console.log("triggered");
           const res = await axios.post(
             "http://localhost:8080/images",
             formData,
@@ -28,7 +28,8 @@ const Upload = () => {
                 "Content-Type": "multipart/form-data",
               },
             }
-          )
+            )
+            console.log("outside");
             navigate(`/result/${res?.data?.id}`)
             
         } catch (error) {
