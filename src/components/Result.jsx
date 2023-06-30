@@ -69,8 +69,8 @@ const Result = () => {
                   <p className="text-black">{data?.judgement}</p>
                 </div> */
                 <div className="flex items-center gap-4">
-                  <p>severity: </p>
-                  <p className="text-black">{data?.severity}</p>
+                  <p>Severity: </p>
+                  <p className="text-black">{data?.severity}%</p>
                 </div> 
                 }
               </div>
