@@ -29,7 +29,7 @@ const Result = () => {
               <img src={data?._links?.image?.href} alt="result image" />
             </div>
             <div className="bg-white shadow-xl rounded-2xl h-full p-20 text-blue-400 font-semibold text-2xl">
-              {/* <p className="mb-10 text-blue-600">
+              <p className="mb-10 text-blue-600">
                 <span
                   className={
                     data?.judgement === "POSITIVE"
@@ -40,15 +40,15 @@ const Result = () => {
                   {data?.judgement === "POSITIVE"
                     ? "You have "
                     : "You don't have "}
-                  {data?.disease.toLowerCase()+". "}
+                  {data?.disease.toLowerCase() + ". "}
                 </span>
                 <br />
                 {data?.judgement === "POSITIVE"
                   ? "You should consult a doctor immediately."
                   : "There is no need to worry, but you should still follow up with a doctor."}
-              </p> */}
+              </p>
               <div className="flex flex-col items-start gap-4">
-                {/* <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4">
                   <p>Confidence: </p>
                   <p className="text-black">{data?.confidence}</p>
                 </div>
@@ -67,12 +67,11 @@ const Result = () => {
                 <div className="flex items-center gap-4">
                   <p>Judgement: </p>
                   <p className="text-black">{data?.judgement}</p>
-                </div> */
+                </div>
                 <div className="flex items-center gap-4">
                   <p>Severity: </p>
                   <p className="text-black">{data?.severity}%</p>
-                </div> 
-                }
+                </div>
               </div>
             </div>
           </div>
