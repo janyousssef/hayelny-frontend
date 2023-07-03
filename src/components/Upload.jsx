@@ -13,31 +13,30 @@ const Upload = () => {
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-      
-        try {
-          const formData = new FormData();
-          formData.append('image', e.target.image.files[0]);
-
-          const res = await axios.post(
-            "http://20.203.234.120:8080/images",
-            formData,
-            {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }
-            ).catch((err) => {
-                console.log(err);
-            });
-            navigate(`/result/${res?.data?.id}`)
-            
-        } catch (error) {
-          // Handle error
-          console.log(error);
-                   
+      e.preventDefault();
+    
+      try {
+        const formData = new FormData();
+        formData.append('image', e.target.image.files[0]);
+  
+        const res = await fetch("http://20.203.234.120:8080/images", {
+          method: "POST",
+          body: formData,
+        });
+        
+        if (res.ok) {
+          const data = await res.json();
+          navigate(`/result/${data?.id}`);
+        } else {
+          console.log(`HTTP Error: ${res.status}`);
         }
-      };
+        
+      } catch (error) {
+        // Handle error
+        console.log(error);
+                 
+      }
+  };
       
   return (
         <div className="flex justify-center items-center bg-blue-400 py-36">
